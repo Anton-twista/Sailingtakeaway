@@ -2,4 +2,5 @@
 Залит на турецкий хост, с CMS Wordpress.<br />
 stack: HTML, CSS, JS, PHP.<br />
 http://sailingtakeaway.com/<br />
+<br />
 ![Alt text](screenshot.png)
