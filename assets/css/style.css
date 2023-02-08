@@ -1,0 +1,1369 @@
+:root {
+  --gutter: 20px;
+  --bg: #5b9c5a;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "MontserratAlternates-Regular";
+  src: local("MontserratAlternates-Regular"),
+    url("fonts/MontserratAlternates-Medium.woff2") format("woff2"),
+    url("../fonts/MontserratAlternates-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MontserratAlternates-Regular";
+  src: local("MontserratAlternates-Regular"),
+    url("../fonts/MontserratAlternates-Regular.woff2") format("woff2"),
+    url("../fonts/MontserratAlternates-Regular.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MontserratAlternates-Regular";
+  src: local("MontserratAlternates-Regular"),
+    url("../fonts/MontserratAlternates-Bold.woff2") format("woff2"),
+    url("../fonts/MontserratAlternates-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: MontserratAlternates-Regular, sans-serif;
+  line-height: 32px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 35px;
+  font-style: normal;
+  color: rgb(10, 55, 127);
+}
+p {
+  color: rgb(10, 55, 127);
+}
+/* li a {
+  color: rgb(10, 55, 127);
+} */
+
+/* GLOBAL */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.global-main {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.section-descr {
+  margin: 0 auto;
+}
+
+.section-offset {
+  padding-top: 180px;
+}
+
+.section-sides {
+  width: 1000px;
+  margin: auto;
+}
+
+.section-reset {
+  margin-bottom: 100px;
+}
+
+.section-header {
+  padding-bottom: 250px;
+}
+
+/*  HEADER */
+.header-main {
+  position: relative;
+}
+
+.nav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(35, 31, 32, 0.35);
+  position: relative;
+}
+
+.header-icon-box {
+  justify-content: flex-end;
+  /* padding: 10px 0 0 0; */
+}
+
+.icon-box-item {
+  min-width: 30px;
+  min-height: 30px;
+  margin-left: 5px;
+}
+
+.header-logo-img {
+  max-width: 100px;
+  height: 100px;
+  margin: 10px 0 10px 50px;
+}
+
+.header {
+  height: 760px;
+  background-image: url(https://drikus.club/uploads/posts/2021-12/1640868963_5-drikus-club-p-korabl-vid-sverkhu-tekhnika-krasivo-foto-6.jpg);
+  background-position: center left left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(35, 31, 32, 0.25);
+}
+
+.background-tint {
+  background-blend-mode: multiply;
+}
+
+.header-menu-list {
+  flex-wrap: wrap;
+  /* padding-bottom: 5px; */
+}
+
+.header-menu-item {
+  margin: 5px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.header-menu-item:active {
+  content: "";
+  border-bottom: 1px solid #fff;
+}
+
+.header-menu-item:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.header-menu {
+  flex-direction: column;
+  color: #fff;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.header-phone {
+  margin-bottom: 5px;
+}
+
+.header-info {
+  text-align: center;
+  margin-left: 16px;
+}
+
+.weater-contain {
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.header-body {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+.header-title {
+  font-family: sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 45px;
+  color: #fff;
+}
+.header-descr {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.header-btn {
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+.header-btn form {
+  justify-content: center;
+}
+
+.our-fleet-header {
+  background-image: url(https://images.unsplash.com/photo-1581058069115-106d63ec4ec6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1503&q=80);
+  background-position: center left;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.about-us-header {
+  background-image: url(../img/about-bkg.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.info-header {
+  background-image: url(https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/GTYSdDW/videoblocks-front-view-on-luxury-sailing-yacht-boat-nose-with-wooden-parquet-floor-swaying-in-open-sea-at-sunny-day-relaxing-and-peaceful-background-holiday-shot_bwej5c8ddw_thumbnail-1080_01.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.contact-header {
+  background-image: url(../img/contacts-bkg.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.boat-01-header {
+  background-image: url(../img/oceanis-43_bernadet-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.boat-02-header {
+  background-image: url(../img/oceanis-43_bernadet-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.boat-03-header {
+  background-image: url(../img/oceanis-43_bernadet-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.prices-header {
+  background-image: url(../img/pricaes-bkg.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+/* ABOUT US */
+
+.about-line {
+  border-bottom: 1px solid #222;
+  margin: 0 auto 20px;
+  width: 50%;
+}
+
+.about-title-list {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.about-is-list {
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+  margin: 24px auto;
+}
+
+.about-is-list-item {
+  font-size: 20px;
+  line-height: 1.8em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.img-resize {
+  width: 500px;
+  height: 500px;
+}
+
+.information {
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.information-info {
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 0 20px 0 45px;
+}
+
+.about-us-title {
+  margin-bottom: 20px;
+}
+
+.about {
+  max-width: 1000px;
+  padding: 0 200px 0 200px;
+
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.about-us-descr {
+  text-align: justify;
+}
+
+.about-img {
+  width: 50%;
+}
+
+.about-info {
+  justify-content: center;
+  max-width: 600px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.line {
+  border-top: 1px solid #222;
+  width: 40%;
+  padding: 0;
+  margin: 0;
+}
+.our-team-name {
+  font-weight: 600;
+}
+.team-item-pos {
+  font-weight: 600;
+}
+.our-team-item {
+  min-width: 40%;
+}
+
+.our-team-iteam-img {
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+}
+
+.our-team-title {
+  margin-bottom: 0;
+}
+
+.our-team-list {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pic-size {
+  width: 45%;
+}
+
+.pic-size-2 {
+  width: 60%;
+  border: 1px solid #222;
+}
+
+/* YACHT */
+
+.yacht {
+  width: 1900px;
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+.yacht-title {
+  margin-bottom: 0;
+}
+
+.yacht-line {
+  border-top: 1px solid #222;
+  width: 10%;
+  margin: 10px auto 35px auto;
+}
+
+.yacht-descr {
+  margin: 0 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.yacht-card-list {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.yacht-item {
+  width: 30%;
+  background-color: rgba(35, 31, 32, 0.02);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
+}
+.yacht-item-name {
+  /* font-family: sans-serif; */
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+}
+.yacht-item-box {
+  padding: 0px 50px 20px 40px;
+}
+
+.yacht-item-btn {
+  border: 1px solid #222;
+  padding: 10px 20px;
+}
+.yacht-img {
+  max-width: 100%;
+}
+
+/* testimonials */
+
+.testimonials {
+  max-width: 100%;
+  background-image: url(../img/testimonials-3.png);
+  background-repeat: no-repeat;
+  background-position: center -250px;
+  background-size: cover;
+  padding: 0 0 100px;
+}
+
+.testimonials-title {
+  margin: 0;
+  text-align: center;
+}
+
+.testimonials-line {
+  border-bottom: 1px solid #222;
+  margin: 10px auto 35px auto;
+  width: 7.5%;
+}
+
+.slider-descr {
+  padding: 10px 50px 10px 50px;
+  text-align: center;
+}
+
+.slider-name {
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.slider-country {
+  margin: 3px 0 40px 0;
+  text-align: center;
+}
+
+.slider-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.itc-slider {
+  position: relative;
+}
+
+.itc-slider__wrapper {
+  overflow: hidden;
+}
+
+.itc-slider__items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.itc-slider__transition-none {
+  transition: none;
+}
+
+.itc-slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
+}
+
+/* кнопки влево и вправо */
+.itc-slider__btn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  background: rgb(0 0 0 / 20%);
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.itc-slider__btn_hide {
+  display: none;
+}
+
+.itc-slider__btn_prev {
+  left: 0;
+}
+
+.itc-slider__btn_next {
+  right: 0;
+}
+
+.itc-slider__btn:hover,
+.itc-slider__btn:focus {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.3);
+  outline: 0;
+}
+
+.itc-slider__btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.itc-slider__btn_prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.itc-slider__btn_next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* индикаторы */
+.itc-slider__indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.itc-slider__indicator {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(78, 78, 78, 0.363);
+  background-clip: padding-box;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.itc-slider__indicator_active {
+  background-color: rgba(53, 52, 52, 0.9);
+}
+
+/*  FAQ */
+
+.faq {
+  flex-direction: column;
+  align-items: center;
+}
+
+details {
+  padding: 10px 10px 0 10px;
+  width: 1200px;
+  background-color: rgba(158, 208, 255, 0.137);
+  border-radius: 1px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::-moz-list-bullet {
+  list-style-type: none;
+}
+
+summary::marker {
+  display: none;
+}
+
+summary {
+  display: block;
+  padding: 0.3em 1em 0.3em 0.9em;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1.4em;
+  cursor: pointer;
+  position: relative;
+}
+
+summary:before {
+  top: 0.4em;
+  right: 0.3em;
+  color: transparent;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTYuNTkgOC41OUwxMiAxMy4xNyA3LjQxIDguNTkgNiAxMGw2IDYgNi02eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=")
+    no-repeat 50% 50% / 1em 1em;
+  width: 1em;
+  height: 1em;
+  content: "";
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+details[open] > summary:before {
+  transform: scale(1, -1);
+}
+
+summary ~ * {
+  padding: 0 1em 10px 1.4em;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+summary:focus {
+  outline: 0;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/*  ENJOY */
+
+.enjoy {
+  text-align: center;
+  background-color: rgba(190, 190, 190, 0.3);
+}
+
+.enjoy-parag {
+  margin: 0;
+  padding: 40px;
+}
+
+/* FOOTER */
+
+.footer {
+  max-width: 100%;
+  flex-wrap: wrap;
+  color: #fff;
+  background-color: #0a377f;
+  justify-content: space-evenly;
+  padding: 0 30px;
+}
+
+.enjoy a {
+  color: blue;
+}
+
+.footer-box {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.footer-logo {
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-logo-descr {
+  margin-top: 0;
+  color: #fff;
+}
+
+.footer-logo-img {
+  max-width: 200px;
+  height: 200px;
+  margin: 10px 0 10px 0px;
+}
+
+.footer-conact {
+  width: 60%;
+
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+.footer-contact-title {
+  margin-top: 0;
+}
+
+.footer-nav {
+  width: 30%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-nav-list {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.footer-nav-item {
+  font-weight: 600;
+}
+.footer-nav-item a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.footer-icons {
+  justify-content: center;
+}
+
+.footer-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.language-icon-box {
+  align-items: center;
+}
+
+.footer-phone {
+  margin-right: 10px;
+}
+
+.language-icon {
+  width: 20px;
+  margin-left: 5px;
+}
+
+/* GALLERY */
+
+/* (B) GALLERY WRAPPER */
+.gallery {
+  /* (B1) GRID LAYOUT - 3 IMAGES PER ROW */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+
+  /* (B2) OPTIONAL WIDTH RESTRICT */
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* (C) GALLERY IMAGES */
+.gallery img {
+  /* (C1) DIMENSION */
+  width: 100%;
+  height: 150px;
+  /* optional */
+  padding: 10px;
+
+  /* (C2) COLORS */
+  border: 1px solid #ddd;
+  background: #fff;
+
+  /* (C3) IMAGE RESIZE */
+  /* cover | contain | fill | scale-down */
+  object-fit: contain;
+  position: relative;
+}
+
+/* (D) ON SMALL SCREENS - 2 IMAGES PER ROW */
+@media only screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* (E) OPTIONAL ZOOM ON HOVER */
+.gallery img:hover {
+  z-index: 9;
+  transform: scale(1.3);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.5s;
+}
+
+/* (F) FULLSCREEN MODE */
+.gallery img.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fit;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery img.full:hover {
+  z-index: 999;
+  transform: none;
+}
+
+/* Contacts */
+
+.formbold-mb-5 {
+  margin-bottom: 20px;
+}
+
+.formbold-pt-3 {
+  padding-top: 12px;
+}
+
+.formbold-main-wrapper {
+  display: flex;
+}
+
+.formbold-form-wrapper {
+  max-width: 550px;
+  width: 100%;
+  background: white;
+}
+
+.formbold-form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #07074d;
+  margin-bottom: 12px;
+}
+
+.formbold-form-label-2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6b7280;
+  outline: none;
+  resize: none;
+}
+
+.formbold-form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  background-color: #6a64f1;
+  color: white;
+  cursor: pointer;
+}
+
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold--mx-3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.formbold-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.w-full {
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .sm\:w-half {
+    width: 50%;
+  }
+}
+
+.contact-main {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.contact-form-title {
+  margin-top: 50px;
+  padding: 20px;
+  border-bottom: 1px solid #222;
+  border-top: 1px solid #222;
+}
+
+.contact-info-title {
+  margin-top: 0;
+  text-align: center;
+}
+
+.contact-info-descr {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.contact-item {
+  padding-bottom: 10px;
+}
+
+.contact-icon {
+  margin-right: 10px;
+}
+
+.section-info {
+  height: 350px;
+  padding: 0 400px 0 400px;
+}
+
+.img-size {
+  min-width: 500px;
+  min-height: 360px;
+  border: 1px solid #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-title {
+  margin-bottom: 0;
+}
+
+.info-title-line {
+  border-bottom: 1px solid #222;
+  width: 20%;
+  margin: 10px auto 35px auto;
+}
+
+.about-item-info {
+  margin-bottom: 10px;
+}
+
+.contact-map {
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.btn-style {
+  position: relative;
+  transition: all 0.35s;
+}
+
+.btn-style {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-style:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #20cfdb83;
+  transition: all 0.35s;
+}
+
+.btn-style:hover:after {
+  width: 100%;
+}
+
+/* IMG-STYLE */
+
+.scale {
+  display: inline-block;
+  /* Строчно-блочный элемент */
+  overflow: hidden;
+  /* Скрываем всё за контуром */
+}
+
+.scale img {
+  transition: 0.5s;
+  /* Время эффекта */
+  display: block;
+  /* Убираем небольшой отступ снизу */
+}
+
+.scale img:hover {
+  transform: scale(1.07);
+  /* Увеличиваем масштаб */
+}
+
+.section-boat-01 {
+  width: 1400px;
+  margin: 0 auto 100px auto;
+  text-align: center;
+}
+
+.wid {
+  width: 500px;
+  justify-content: center;
+}
+
+.form-cotact-position {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* PRICES */
+
+table {
+  border-collapse: collapse;
+  line-height: 1.1;
+  table-layout: fixed;
+  width: 1000px;
+  margin-bottom: 70px;
+}
+
+th {
+  border: 1px solid rgba(34, 34, 34, 0.164);
+  background-color: #3399ff45;
+  font-weight: 300;
+  text-align: center;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  font-weight: 100;
+  border: 1px solid rgba(34, 34, 34, 0.164);
+  text-align: center;
+}
+
+/*
+	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  td {
+    /* Behave  like a "row" */
+
+    border: none;
+    border-bottom: 1px solid #222;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    display: flex;
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    left: 6px;
+    width: 45%;
+    white-space: nowrap;
+  }
+
+  /*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+  td:nth-of-type(1):before {
+    content: "January-Febrary";
+  }
+
+  td:nth-of-type(2):before {
+    content: "March-April";
+  }
+
+  td:nth-of-type(3):before {
+    content: "May";
+  }
+
+  td:nth-of-type(4):before {
+    content: "June";
+  }
+
+  td:nth-of-type(5):before {
+    content: "July";
+  }
+
+  td:nth-of-type(6):before {
+    content: "August";
+  }
+
+  td:nth-of-type(7):before {
+    content: "September-October";
+  }
+
+  td:nth-of-type(8):before {
+    content: "November-December";
+  }
+
+  /* lable Required additional options */
+  .required:nth-of-type(1):before {
+    content: "Transit log";
+  }
+
+  .required:nth-of-type(2):before {
+    content: "Cleaning";
+  }
+
+  .required:nth-of-type(3):before {
+    content: "Security deposit";
+  }
+
+  /* lable options table */
+  .options:nth-of-type(1):before {
+    content: "Turkish transit log";
+  }
+
+  .options:nth-of-type(2):before {
+    content: "Captain";
+  }
+
+  .options:nth-of-type(3):before {
+    content: "Hanging matator";
+  }
+
+  .options:nth-of-type(4):before {
+    content: "Return transit log";
+  }
+
+  .options:nth-of-type(5):before {
+    content: "Chef / Hostess";
+  }
+
+  .options:nth-of-type(6):before {
+    content: "Extra bedding";
+  }
+
+  .options:nth-of-type(7):before {
+    content: "Internet";
+  }
+
+  .options:nth-of-type(8):before {
+    content: "Extra set of towels";
+  }
+}
+
+table {
+  margin-right: 0;
+}
+
+.table-name {
+  color: #fff;
+  background-color: #0a377f;
+  background: linear-gradient(90deg, #0a377f 0%, #3399ff45);
+  margin-bottom: 25px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.price-line {
+  margin: 0 auto 35px auto;
+  width: 35%;
+  border-bottom: 1px solid #222;
+}
+
+.prices-about {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricses-tittle {
+  margin-bottom: 10px;
+}
+
+/* ADAPTIVE */
+
+.row {
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 2);
+  padding-left: calc(var(--bs-gutter-x) * 2);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > li {
+  padding: 15px;
+  margin: 0 auto;
+  background-color: wheat;
+  border: 1px solid gray;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: calc(100% - var(--gutter));
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: calc(50% - var(--gutter));
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: calc(25% - var(--gutter));
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: calc(33.33% - var(--gutter));
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: calc(40% - var(--gutter));
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: calc(10% - var(--gutter));
+}
+
+.col-3-yacht {
+  width: calc(33% - var(--gutter));
+}
+
+.col-3-yacht-section {
+  width: calc(85% - var(--gutter));
+}
+
+.row-anti > * {
+  padding: 0;
+  margin: 0;
+}
